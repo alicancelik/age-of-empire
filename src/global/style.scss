@@ -1,0 +1,40 @@
+@import '~antd/dist/antd.css';
+
+* {
+	padding: 0;
+	margin: 0;
+}
+.layout {
+	display: flex;
+	flex: 1;
+}
+
+.link-container {
+	text-decoration: none;
+}
+
+.nav-menu {
+	height: 52px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #333;
+	display: flex;
+	align-items: center;
+	padding: 0 12px;
+	a {
+		.menu-item {
+			color: #fff;
+		}
+	}
+}
+.menu-items {
+	right: 0;
+	margin-right: 50px;
+  position: absolute;
+}
+.page-container {
+	margin-top: 52px;
+	flex: 1,
+}
