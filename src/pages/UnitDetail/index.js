@@ -15,7 +15,7 @@ class UnitDetail extends Component {
   renderCostItems = (key, value) => (
     <div>
       <h3>
-      { `${key}: ${value || 'Unknown'}` }
+        {`${key}: ${value || 'Unknown'}`}
       </h3>
     </div>
   )
@@ -26,15 +26,15 @@ class UnitDetail extends Component {
       keys.map(k => (k !== 'cost' ? (
         <div>
           <h3>
-            { `${k}: ${data[k]}` }
+            {`${k}: ${data[k]}`}
           </h3>
         </div>
-      ) : 
-      <div>
-        {this.renderCostItems('Wood Cost', data.cost?.Wood)}
-        {this.renderCostItems('Food Cost', data.cost?.Food)}
-        {this.renderCostItems('Gold Cost', data.cost?.Gold)}
-      </div>)));
+      ) :
+        <div>
+          {this.renderCostItems('Wood Cost', data.cost ?.Wood)}
+          {this.renderCostItems('Food Cost', data.cost ?.Food)}
+          {this.renderCostItems('Gold Cost', data.cost ?.Gold)}
+        </div>)));
   }
 
 
@@ -42,7 +42,7 @@ class UnitDetail extends Component {
     return (
       <div className="container">
         <h2 className="title"> Unit Detail Page</h2>
-        {this.renderElements(this.props?.unitDetail)}
+        {this.renderElements(this.props ?.unitDetail)}
       </div>
     );
   }
@@ -56,4 +56,4 @@ UnitDetail.propTypes = {
   unitDetail: PropTypes.object,
 };
 
-export default connect(mapStateToProps)(UnitDetail);
+export default connect(mapStateToProps, null)(UnitDetail);

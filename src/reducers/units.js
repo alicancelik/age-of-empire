@@ -6,18 +6,14 @@ import {
   SET_UNIT_DETAIL
 } from '../symbols/units';
 
-const handleFilter = (list, filter) => list.filter(l => (filter.age === 'All'
+export const handleFilter = (list, filter) => list ?.filter(l => (filter.age === 'All'
   ? l
   : l.age === filter.age)
-  && (filter.woodChecked ? l?.cost?.Wood >= filter?.woodValue : l)
-  && (filter.foodChecked ? l?.cost?.Food >= filter?.foodValue : l)
-  && (filter.goldChecked ? l?.cost?.Gold >= filter?.goldValue : l));
+  && (filter.woodChecked ? l ?.cost ?.Wood >= filter ?.woodValue : l)
+  && (filter.foodChecked ? l ?.cost ?.Food >= filter ?.foodValue : l)
+  && (filter.goldChecked ? l ?.cost ?.Gold >= filter ?.goldValue : l));
 
-export default (state = {
-  error: false,
-  loading: true,
-  data: null,
-}, action) => {
+export default (state = {}, action) => {
   switch (action.type) {
     case GET_UNITS:
       return {
